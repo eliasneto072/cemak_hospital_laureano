@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="{% static '/media/logopagina(2).png' %}">
+    <title>HNL - CEMAK</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="imgHeader">
+            <a href="{% url 'home' %}"><img src="{% static '/media/logowhite.png' %}" alt="logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li class="botao"><a href="#">Ensino</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="subMenu1">
+                        <ul>
+                            <li class="hoverMenu2"><a href="#">Treinamento HNL</a>
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <div class="subMenu2">
+                                    <ul>
+                                        <li>Cuidados Paliativos</li>
+                                        <li>Parada Cardiorrespiratória(PCR)</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="{% url 'auth:account_login' %}">Área do Aluno CEMAK</a></li>
+                            <li class="hoverMenu2"><a href="#">Cursos CEMAK</a>
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <div class="subMenu2">
+                                    <ul>
+                                        <li>Capacitação de urgência e emergência para técnicos de enfermagem</li>
+                                        <li>Curso prático de manipulação de cateteres venosos centrais e hipodermóclise
+                                        </li>
+                                        <li>Aperfeiçoamente prático no tratamento de feridas e estomias</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="botao"><a href="#">Pesquisador</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="subMenu1">
+                        <ul>
+                            <li><a href="https://cemak.org/wp-content/uploads/2022/06/Fluxo-de-Pesquisa_HNL.pdf">Fluxo
+                                    de Pesquisa</a></li>
+                            <li><a href="#">Termo de Responsabilidade</a></li>
+                            <li><a href="#">Carta de anuência setorial com autorização do uso de dados</a></li>
+                            <li><a href="#">Carta de anuência do SAME</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="botao" id="borda"><a href="#">Eventos</a></li>
+                <li class="botao" id="borda"><a href="#">Campanhas</a></li>
+            </ul>
+
+        </nav>
+        <div class="imgLaureano">
+            <img src="{% static 'media/logoLaureano.png' %}" alt="Logo laureano">
+        </div>
+    </header>
+
+    {% block 'section' %}
+
+    <section class="alinhar">
+        <div class="carrosel">
+            <div class="slides">
+                <div class="passador">
+
+                </div>
+
+                <div id="atual" class="imagens">
+                    <img src="{% static 'media/img2.avif' %}" alt="imagem 1">
+                </div>
+                <div class="imagens">
+                    <img src="{% static 'media/img1.jpg' %}" alt="imagem 2">
+                </div>
+                <div class="imagens">
+                    <img src="{% static 'media/img3.avif' %}" alt="imagem 3">
+                </div>
+            </div>
+        </div>
+        <div class="doacao">
+            <div class="imgDoacao">
+                <img src="{% static '/media/logoLaureano.png' %}">
+            </div>
+            <div class="textoDoacao">
+                <h2>Faça sua doação já!</h2>
+                <p>Clique aqui para saber mais</p>
+            </div>
+        </div>
+    </section>
+
+    {% endblock 'section' %}
+
+    <footer class="footer">
+        <div class="logoCemak">
+            <img src="{% static '/media/logowhite.png' %}" alt="">
+        </div>
+        <div class="socialCemak">
+            <h2>Redes de contato</h2>
+            <nav>
+                <ul>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="ouvidoriaCemak">
+            <h2>SAC</h2>
+            <p>4002-8922</p>
+        </div>
+    </footer>
+
+
+
+    <script src="{% static '/js/script.js' %}"></script>
+</body>
+
+</html>
