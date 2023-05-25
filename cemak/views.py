@@ -10,19 +10,21 @@ from .serializers import *
 from .forms import * 
 
 
+footer = Footer.objects.all()
+
 def homeView(request):
-    context={}
+    banner = Banner.objects.order_by('-posicao')
+    noticias = Noticia.objects.order_by('-data')
+    context={'banner':banner, 'noticias':noticias, 'footer':footer}
     return render(request, 'index.html', context)
 
 @login_required
 def alunoView(request):
-    context={}
+    video = Video.objects.order_by('-data')
+    context={'video':video, 'footer':footer}
     return render(request, 'area-do-aluno.html', context)
 
 
-def treinamentoView(request):
-    context={}
-    return render(request, '.html', context)
 
 
 

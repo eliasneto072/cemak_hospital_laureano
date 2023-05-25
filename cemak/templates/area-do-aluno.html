@@ -5,22 +5,29 @@
 {% block 'section' %}
 <br>
 <br>
+    <h1 style="margin-left: 50px;">Area do Aluno</h1>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-    <h1>Area do Aluno</h1>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    {% for item in video %}
+        <div style="display: flex;justify-content: center;align-items: center;flex-flow: row wrap; width: 23%;margin-left: 20px;">
+            <a href="{{item.link_video}}" target="_blank" style="color: black; text-align: center;">
+                <div>
+                    <div style="width: 290px; height: 200px;display: flex; justify-content: center; align-items: center; border: 2px solid green;">
+                        <img src="{{item.thumbnail.url}}" alt="{{item.titulo}}" width="99%" height="99%">
+                    </div>
+                    <br>
+                    {{item.titulo}}
+                    <br>
+                    <br>
+                    <div>
+                        {{item.autor}}
+                    </div>
+                    <br>
+                </div>
+           </a>    
+        </div>
+    {% endfor %}
 <br>
 <br>
 <br>
