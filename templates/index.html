@@ -108,9 +108,18 @@
             </div>
         </div>
     </section>
-
+    {% for item in noticias %}
+                <a href="{% url 'noticias' item.manchete %}" style='color: black;'>
+                    <div style="display: flex; justify-content: start; align-items: center; width: 20%; height: 10%; border-bottom: 3px solid green;">
+                        <img src="{{item.imagem.url}}" alt="{{item.manchete}}" width="120px" height="100px">   
+                       <div >{{item.manchete}}</div> 
+                </div>
+                </a>
+                <br>
+                <br>
+                {% endfor %}
     {% endblock 'section' %}
-
+        </div>
     <footer class="footer">
         <div class="logoCemak">
             <img src="{% static '/media/logowhite.png' %}" alt="">

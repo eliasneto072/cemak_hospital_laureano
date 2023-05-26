@@ -5,16 +5,13 @@
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
-{% block 'css' %}
+{% block css %}
 <link rel="stylesheet" href=".css">
-{% endblock 'css' %}
+{% endblock css %}
 
 {% block content %}
-<div style="margin: 0 500px;">
+<div class="teste">
 <h1>{% trans "Sign In" %}</h1>
-
-<h2>mudando html login</h2>
-<h3>teste 2</h3>
 
 {% get_providers as socialaccount_providers %}
 

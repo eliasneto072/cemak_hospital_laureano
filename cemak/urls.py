@@ -11,7 +11,9 @@ from allauth.account.views import (
 urlpatterns = [
     # cemak
     path('', homeView, name='home'),
+    path('noticias/<str:manchete>/', noticiasView, name='noticias'),
     path('aulas/', alunoView, name='aulas'),
+    
     
     
     #path('eventos/', eventosView, name='eventos'),

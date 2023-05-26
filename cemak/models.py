@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Noticia(models.Model):
     manchete = models.CharField(max_length=200)
     materia = models.CharField(max_length=1000)
@@ -14,6 +13,10 @@ class Noticia(models.Model):
         verbose_name_plural = 'Notícias'
         verbose_name = 'Notícia'
 
+    def validacao(self):
+        if len(self.manchete) < 8:
+            raise ValueError('A manchete deve ter pelo menos 8 caracteres')
+    
     def __str__(self):
         return self.manchete
 
@@ -67,3 +70,4 @@ class Footer(models.Model):
     def str(self) -> str:
         return self.endereco
     
+

@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block 'section' %}
+
+
+    
+    {{noticias.manchete}}
+    {{noticias.materia}}
+    {{noticias.link_imagem}}
+    <img src="{{noticias.imagem.url}}" alt="{{noticias.manchete}}" width="100px">
+    {{noticias.autor}}
+    {{noticias.data}}
+    {{noticias.categoria}}
+
+
+{% endblock 'section' %}

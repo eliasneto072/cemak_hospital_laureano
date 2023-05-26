@@ -18,6 +18,14 @@ def homeView(request):
     context={'banner':banner, 'noticias':noticias, 'footer':footer}
     return render(request, 'index.html', context)
 
+
+def noticiasView(request, manchete):
+    noticias = Noticia.objects.get(manchete=manchete)
+    context={'noticias':noticias, 'footer':footer}
+    return render(request, 'noticias.html', context)
+
+
+
 @login_required
 def alunoView(request):
     video = Video.objects.order_by('-data')

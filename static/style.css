@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    display: flexbox;
+  }
+  
+  :root {
+    --color-cemak-green: #05572D;
+    --color-cemak-shineGreen: #05ff00;
+  }
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0a7508;
+    height: 15vh;
+  }
+  .header img {
+    width: 20vw;
+  }
+  nav {
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  nav ul {
+    display: inline-flex;
+    list-style: none;
+  
+  }
+  nav ul .botao {
+    width: 130px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;  
+    font-size: 18px;
+    
+  }
+  nav ul .botao i {
+    color: #ffffff;
+  }
+  
+   
+  .subMenu1 {
+    display: none;
+    z-index: 1;
+  }
+  
+  nav ul .botao:hover .subMenu1 {
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -40px;
+  }
+  
+  nav ul .botao:hover .subMenu1 ul {
+    display: block;
+  }
+  
+  nav ul .botao:hover .subMenu1 ul li {
+    width: 200px;
+    text-align: start;
+    padding: 10px;
+    border: 1px solid;
+    border-bottom: 1px solid #05572D;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.7s;
+    margin-top: 3px;
+  }
+  
+  nav ul .botao:hover .subMenu1 ul li:hover {
+    background-color: rgb(156, 235, 191);
+  }
+  
+  .subMenu2 {
+    display: none;
+  }
+  
+  .hoverMenu2:hover .subMenu2 {
+    display: block;
+    position: absolute;
+    margin-top: -33px;
+    margin-left: 210px;
+  }
+  
+  
+  #borda:hover {
+    border-bottom: 1px solid #ffffff;
+  }
+  
+  /*IMAGEM*/
+  
+  .imgHeader img {
+    display: flex;
+    height: 4.5rem;
+    width: 100%;
+  }
+  
+  /*BOTÃO*/
+  .botao {
+    color: #05572D;
+    font-style: italic;
+    transition: all 0.4s;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .subMenu1 a{
+    color: var(--color-cemak-green);
+  }
+  nav .botao:hover {
+    padding: 3px;
+  }
+  .imgLaureano{
+    background-color: #ffffff;
+    height: 9.4vh;
+    margin-top: 0.15em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .imgLaureano img{
+    width: 8em;
+  }
+  
+  /* Carrosel */
+  .alinhar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3em;
+  }
+  
+  .carrosel { 
+    
+    width: 1024px;
+    height: 29em;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 0.4s;
+  }
+  
+  .slides {
+    width: 5120px;
+    display: flex;
+  }
+  
+  .imagens img {
+    width: 1024px;
+    height: auto;
+  }
+  #atual{
+    
+    transition: all 3s;
+  }
+  
+  .btn{
+    position: absolute;
+    color: #020202;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 1.7rem;
+  
+  }
+  .btn:hover{
+    transform: scale(1.5);
+  }
+  #voltar{
+    top: 50%;
+    left: 10%;
+    
+  }
+  #passar{
+    top: 50%;
+    right: 10%;
+  }
+  .passador{
+    position: absolute;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    margin-top: 27rem;
+  }
+  .passador div{
+    transition: all 0.5s;
+    border: 2px solid #ffffff;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+  
+  }
+  .passador div:hover{
+    background-color: var(--color-cemak-green);
+  }
+  .imgAtual{
+    background-color: var(--color-cemak-green);
+    transition: all 0.5s;
+  }
+  
+  .alinhar .doacao{
+    border-radius: 20px;
+    width: 15%;
+    height: 35vh;
+    margin-top: 4.3em;
+    background-color: #0a7508;
+  }
+  .doacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .doacao .imgDoacao{
+    margin-top: 0.4em;
+    background-color: #ffffff;
+    width: 12em;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .doacao .imgDoacao img{
+    width: 90%;
+  }
+  
+  .doacao .textoDoacao{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .doacao .textoDoacao h2{
+    margin-bottom: 1em;
+  }
+  
+  /* footer */
+  
+  .footer{
+    background-color: var(--color-cemak-green);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+  }
+  .logoCemak img{
+    width: 20em;
+  }
+   .socialCemak{
+    display: flex;
+    flex-direction: column;
+  }
+  .socialCemak ul {
+    
+    display: flex;
+    justify-content: space-around;
+    width: 10vw;
+  }
+  .socialCemak ul li i{
+    font-size: 20px;
+    
+  }
+  .socialCemak ul li i:hover{
+    color: var(--color-cemak-shineGreen);
+  }
+  
+  
+  
+  
+  
